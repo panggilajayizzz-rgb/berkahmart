@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warung Berkah Mart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">Warung Berkah <span>Mart</span></a>
+    <input type="search" id="search" placeholder="Cari produk..." aria-label="Cari produk">
+    <button class="cart-btn" id="openCart" aria-label="Buka keranjang">
+      Keranjang <span class="badge" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <h1>Belanja kebutuhan harian, lebih dekat dan hemat.</h1>
+    <p>Sembako, minuman, dan camilan pilihan untuk keluarga Anda.</p>
+    <a href="#produk" class="btn">Mulai belanja</a>
+  </section>
+
+  <main id="produk" class="container">
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="productGrid"></div>
+    <p class="empty" id="empty" hidden>Produk tidak ditemukan. Coba kata kunci lain.</p>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Warung Berkah Mart. Buka setiap hari, 07.00 – 21.00.</p>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Keranjang belanja">
+    <div class="drawer-head">
+      <h2>Keranjang</h2>
+      <button class="close" id="closeCart" aria-label="Tutup keranjang">&times;</button>
+    </div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><strong id="cartTotal">Rp0</strong></div>
+      <button class="btn full" id="checkout">Pesan sekarang</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
